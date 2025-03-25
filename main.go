@@ -51,7 +51,7 @@ func (eq *Reqbound[T]) Worker(ctx context.Context, processor func(string) error,
 	}
 }
 
-func NewEventQueue[T item.Blueprint](redis *redis.UniversalClient, name string, throughput int64) *Reqbound[T] {
+func NewReqbound[T item.Blueprint](redis *redis.UniversalClient, name string, throughput int64) *Reqbound[T] {
 	duration := time.Duration(60/throughput) * time.Second
 
 	return &Reqbound[T]{
