@@ -37,14 +37,14 @@ func (eq *Reqbound[T]) Worker(ctx context.Context, processor func(string) error,
 			continue
 		}
 
-		go func(ranID string) {
-			err = processor(randid)
+		go func(randID string) {
+			err := processor(randID) // Define err within the goroutine scope
 			if err != nil {
-				errMsg := errors.New("Invocation RandId: " + randid + " failed: " + err.Error())
-				errorLogger(errMsg, randid)
-				errPush := eq.client.LPush(ctx, eq.name, randid)
+				errMsg := errors.New("Invocation RandId: " + randID + " failed: " + err.Error())
+				errorLogger(errMsg, randID)
+				errPush := eq.client.LPush(ctx, eq.name, randID)
 				if errPush.Err() != nil {
-					errorLogger(errors.New("Failed to push back randId: "+randid+" error: "+errPush.Err().Error()), randid)
+					errorLogger(errors.New("Failed to push back randId: "+randID+" error: "+errPush.Err().Error()), randID)
 				}
 			}
 		}(randid)
