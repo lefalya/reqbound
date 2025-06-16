@@ -4,6 +4,8 @@ github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f h1:lO4WD4F/r
 github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f/go.mod h1:cuUVRXasLTGF7a8hSLbxyZXjz+1KgoB3wDUb6vlszIc=
 github.com/google/uuid v1.6.0 h1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0=
 github.com/google/uuid v1.6.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
+github.com/lefalya/item v0.3.1 h1:CYiP37V1cZo+niLhVMCJDeR6d9Gabr2qi5aZ4xcsLH0=
+github.com/lefalya/item v0.3.1/go.mod h1:L35JD4rIJir5MilQ+Zu6/pzM8dYDcF2VUjQZKAed52E=
 github.com/lefalya/item v1.2.0 h1:4fIyv2HItDI357HuRira4+WEfEcofmdp+Osxrzmp0ao=
 github.com/lefalya/item v1.2.0/go.mod h1:L35JD4rIJir5MilQ+Zu6/pzM8dYDcF2VUjQZKAed52E=
 github.com/redis/go-redis/v9 v9.7.3 h1:YpPyAayJV+XErNsatSElgRZZVCwXX9QzkKYNvO7x0wM=
