@@ -17,12 +17,8 @@ type Reqbound[T item.Blueprint] struct {
 }
 
 func (eq *Reqbound[T]) Add(ctx context.Context, item T) error {
-	err := eq.client.LPush(ctx, eq.name, item.GetRandId())
-	if err != nil {
-		return err.Err()
-	}
-
-	return nil
+	cmd := eq.client.LPush(ctx, eq.name, item.GetRandId())
+	return cmd.Err()
 }
 
 func (eq *Reqbound[T]) Worker(ctx context.Context, processor func(string) error, errorLogger func(error, string)) {
